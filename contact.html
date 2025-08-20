@@ -116,14 +116,20 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Contact Me</h1>
-    <form action="https://formspree.io/f/xpwlgrgp" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+ <div class="contact-form">
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
 
     <div class="contact-info">
       <p><strong>Email:</strong> evaheliud1@gmail.com</p>
@@ -134,4 +140,5 @@
 <!-- Back arrow navigation -->
 <a href="skills.html" class="arrow back">&#11013;</a>
 </body>
+
 </html>
