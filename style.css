@@ -161,4 +161,16 @@ form button:hover {
 
 .btn:hover {
   background: #002850;
+
+}
+.arrow i {
+  font-size: 2rem;
+  color: #004080;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.arrow i:hover {
+  transform: scale(1.2);
+  color: #007BFF;
 }
