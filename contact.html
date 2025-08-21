@@ -6,37 +6,97 @@
   <title>Contact - Evaline M (Snow)</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Fix for back arrow */
-    .arrow-back {
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #003366;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-container h1 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 12px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #007BFF;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .arrow {
       position: fixed;
-      left: 20px;
+      left: 20px; /* <-- moved to left for back navigation */
       top: 50%;
       transform: translateY(-50%);
       font-size: 2rem;
       color: #004080;
       text-decoration: none;
-      z-index: 1000; /* keeps arrow above without overlapping */
-      width: auto;
-      height: auto;
-      line-height: 1;
     }
   </style>
 </head>
 <body>
- <div class="contact-form">
-  <form action="https://formspree.io/f/xpwlgrgp" method="POST">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <form action="https://formspree.io/f/xpwlgrgp" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
 
-    <label for="message">Your Message</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
-</div>
+      <button type="submit">Send Message</button>
+    </form>
 
     <div class="contact-info">
       <p><strong>Email:</strong> evaheliud1@gmail.com</p>
@@ -44,10 +104,10 @@
     </div>
   </div>
 
-<!-- Back arrow navigation -->
-<a href="skills.html" class="arrow back">&#10144;</a>
+  <!-- Back arrow navigation -->
+  <a href="skills.html" class="arrow">&#10144;</a>
 </body>
-
 </html>
+
 
 
