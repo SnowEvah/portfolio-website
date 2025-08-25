@@ -92,6 +92,32 @@
     .arrow.forward {
       right: 20px;
     }
+    /* Glassy 3D Chevron */
+.arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
   </style>
 </head>
 <body>
@@ -149,5 +175,11 @@
 
   <!-- Forward Arrow (to Contact) -->
   <a href="contact.html" class="arrow forward">&#10145;</a>
+  <!-- Back to Home -->
+<a href="index.html" class="arrow" style="left:20px; right:auto;">&#10094;</a>
+
+<!-- Forward to Contact -->
+<a href="contact.html" class="arrow">&#10095;</a>
 </body>
 </html>
+
