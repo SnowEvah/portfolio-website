@@ -4,6 +4,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: #fdfdfd; /* clean white */
   color: #3B2F2F; /* soft dark brown for text */
+  line-height: 1.6;
 }
 
 /* === Containers === */
@@ -11,14 +12,21 @@ body {
   background: #ffffff;
   border: 1px solid #D2B48C; /* light brown accent */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08); /* slightly deeper for definition */
   padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.12);
 }
 
 /* === Headings === */
 h1, h2, h3 {
   color: #8B5E3C; /* professional brown */
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 /* === Buttons === */
@@ -30,11 +38,12 @@ button {
   padding: 12px 20px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background: #A0522D; /* lighter brown on hover */
+  transform: translateY(-2px);
 }
 
 /* === Inputs & Textareas === */
@@ -45,6 +54,13 @@ input, textarea {
   border-radius: 6px;
   font-size: 1rem;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #8B5E3C;
+  box-shadow: 0 0 6px rgba(139, 94, 60, 0.4);
+  outline: none;
 }
 
 /* === Skills Grid === */
@@ -61,6 +77,7 @@ input, textarea {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
+  border: 2px solid #D2B48C;
 }
 
 /* === Arrows (Navigation) === */
@@ -71,10 +88,12 @@ input, textarea {
   font-size: 2rem;
   color: #8B5E3C;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .arrow:hover {
   color: #A0522D;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .arrow.right {
