@@ -9,8 +9,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f8ff;
-      color: #003366;
+      background: #fdfcf9; /* very light cream/white */
+      color: #4e342e; /* dark brown text */
     }
 
     .container {
@@ -22,21 +22,20 @@
 
     h1 {
       margin-bottom: 40px;
-      color: #004080;
+      color: #6d4c41; /* medium brown for headings */
     }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
-  gap: 20px;
-}
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* exactly 3 columns */
+      gap: 20px;
+    }
 
-/* Mobile friendly layout */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr; /* one column on smaller screens */
-  }
-}
+    /* Mobile friendly layout */
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr; /* one column on smaller screens */
+      }
     }
 
     .skill-card {
@@ -44,11 +43,12 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .skill-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .skill-card img {
@@ -57,88 +57,4 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
-    }
-
-    .skill-card h3 {
-      color: #004080;
-      margin-bottom: 10px;
-    }
-
-    .skill-card p {
-      margin-bottom: 10px;
-    }
-
-    .tools {
-      font-size: 0.9rem;
-      color: #666;
-      font-style: italic;
-    }
-
-    .arrow {
-      position: fixed;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: #004080;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>My Skills & Portfolio</h1>
-    <div class="skills-grid">
-      
-      <div class="skill-card">
-        <img src="calendar-management.png" alt="Calendar Management">
-        <h3>Calendar Management</h3>
-        <p>Efficient scheduling, reminders, and time management for busy professionals.</p>
-        <p class="tools">Tools: Google Calendar, Outlook, Trello</p>
-      </div>
-
-      <div class="skill-card">
-        <img src="enhance-email-management-mail-envoy.jpg" alt="Email Management">
-        <h3>Email Management</h3>
-        <p>Inbox organization, filtering, and professional correspondence handling.</p>
-        <p class="tools">Tools: Gmail, Outlook, Spark</p>
-      </div>
-
-      <div class="skill-card">
-        <img src="Lead-Generation.webp" alt="Research & Lead Generation">
-        <h3>Research & Lead Generation</h3>
-        <p>Data collection, market research, and prospect identification for real estate.</p>
-        <p class="tools">Tools: LinkedIn, Apollo, Excel</p>
-      </div>
-
-      <div class="skill-card">
-        <img src="event plan.jpg" alt="Event Planning">
-        <h3>Event Planning</h3>
-        <p>Coordinating virtual/physical events, scheduling, and logistics support.</p>
-        <p class="tools">Tools: Asana, monday.com, Zoom</p>
-      </div>
-
-      <div class="skill-card">
-        <img src="social.jpg" alt="Social Media Assistance">
-        <h3>Social Media Assistance</h3>
-        <p>Post scheduling, content ideas, and engagement support for brands.</p>
-        <p class="tools">Tools: Canva, Buffer, Hootsuite</p>
-      </div>
-
-      <div class="skill-card">
-        <img src="property.jpg" alt="Property Management">
-        <h3>Property Management</h3>
-        <p>Helping real estate firms manage listings, tenants, and client communication.</p>
-        <p class="tools">Tools: Buildium, AppFolio, Google Workspace</p>
-      </div>
-
-    </div>
-  </div>
-
- <!-- Back Arrow (to Home) -->
-<a href="index.html" class="arrow back">&#11013;</a>
-
-<!-- Forward Arrow (to Contact) -->
-<a href="contact.html" class="arrow forward">&#10145;</a>
-</body>
-</html>
+      border: 3px solid #d7ccc8
