@@ -103,3 +103,29 @@ input:focus, textarea:focus {
 .arrow.left {
   left: 20px;
 }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #8B4513; /* your main brown color */
+  color: white;              /* text color */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;              /* remove any default borders */
+  box-shadow: none;          /* remove shadows */
+  text-shadow: none;         /* remove text shadows */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #A0522D; /* slightly lighter brown on hover */
+}
+
+.download-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
