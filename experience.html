@@ -4,471 +4,1047 @@
 
 <head>
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Professional Experience | Evaline Mwatha</title>
+  <title>Experience & Projects - Evaline Mwatha (Snow)</title>
 
-    <style>
+  <link rel="stylesheet" href="style.css">
 
-        :root {
+  <style>
 
-            --primary: #243b53;
+    body {
 
-            --accent: #b68b5e;
+      margin: 0;
 
-            --background: #f7f8fa;
+      font-family: Arial, sans-serif;
 
-            --text: #263238;
+      background: #fffaf5;
 
-            --muted: #687783;
+      color: #4e342e;
 
-        }
+      line-height: 1.7;
 
-        * {
+    }
 
-            box-sizing: border-box;
+    /* Navigation */
 
-        }
+    .navbar {
 
-        body {
+      display: flex;
 
-            margin: 0;
+      justify-content: center;
 
-            font-family: Arial, sans-serif;
+      flex-wrap: wrap;
 
-            background: var(--background);
+      gap: 25px;
 
-            color: var(--text);
+      padding: 18px 15px;
 
-            line-height: 1.7;
+      background: #ffffff;
 
-        }
+      border-bottom: 1px solid #D2B48C;
 
-        header {
+    }
 
-            background: white;
+    .navbar a {
 
-            padding: 22px 8%;
+      color: #6d4c41;
 
-            display: flex;
+      text-decoration: none;
 
-            justify-content: space-between;
+      font-weight: bold;
 
-            align-items: center;
+      font-size: 0.95rem;
 
-            border-bottom: 1px solid #eee;
+    }
 
-        }
+    .navbar a:hover {
 
-        header a {
+      color: #A0522D;
 
-            color: var(--primary);
+    }
 
-            text-decoration: none;
+    /* Page introduction */
 
-            font-weight: bold;
+    .hero {
 
-        }
+      text-align: center;
 
-        nav {
+      padding: 65px 20px;
 
-            display: flex;
+      background: linear-gradient(to right, #d7ccc8, #efebe9);
 
-            gap: 22px;
+    }
 
-            flex-wrap: wrap;
+    .hero h1 {
 
-        }
+      color: #3e2723;
 
-        .hero {
+      font-size: 2.4rem;
 
-            background: var(--primary);
+      margin-bottom: 10px;
 
-            color: white;
+    }
 
-            padding: 85px 8%;
+    .hero p {
 
-        }
+      max-width: 750px;
 
-        .hero h1 {
+      margin: 10px auto;
 
-            font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: 1.05rem;
 
-            margin-bottom: 12px;
+    }
 
-        }
+    /* Main container */
 
-        .hero p {
+    .section {
 
-            max-width: 650px;
+      max-width: 1100px;
 
-            color: #e0e7ed;
+      margin: 55px auto;
 
-        }
+      padding: 0 20px;
 
-        main {
+    }
 
-            max-width: 1100px;
+    .section-title {
 
-            margin: auto;
+      text-align: center;
 
-            padding: 60px 24px;
+      color: #8B5E3C;
 
-        }
+      margin-bottom: 12px;
 
-        .section-title {
+      font-size: 2rem;
 
-            color: var(--primary);
+    }
 
-            margin-bottom: 30px;
+    .section-intro {
 
-        }
+      text-align: center;
 
-        .experience-card,
+      max-width: 750px;
 
-        .project-card {
+      margin: 0 auto 35px;
 
-            background: white;
+    }
 
-            padding: 30px;
+    /* Experience cards */
 
-            margin-bottom: 25px;
+    .experience-card {
 
-            border-radius: 12px;
+      display: grid;
 
-            border: 1px solid #e7eaed;
+      grid-template-columns: 300px 1fr;
 
-        }
+      gap: 28px;
 
-        .experience-card h3,
+      background: #ffffff;
 
-        .project-card h3 {
+      border: 1px solid #D2B48C;
 
-            color: var(--primary);
+      border-radius: 12px;
 
-            margin-top: 0;
+      padding: 22px;
 
-        }
+      margin-bottom: 28px;
 
-        .category {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
 
-            color: var(--accent);
+      align-items: start;
 
-            font-size: 0.85rem;
+    }
 
-            font-weight: bold;
+    .experience-card img {
 
-            text-transform: uppercase;
+      width: 100%;
 
-            letter-spacing: 1px;
+      height: 250px;
 
-        }
+      object-fit: cover;
 
-        .meta {
+      border-radius: 9px;
 
-            color: var(--muted);
+      border: 1px solid #D2B48C;
 
-            font-size: 0.9rem;
+    }
 
-        }
+    .experience-card h3 {
 
-        .project-grid {
+      color: #8B5E3C;
 
-            display: grid;
+      margin-top: 0;
 
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-bottom: 5px;
 
-            gap: 22px;
+    }
 
-        }
+    .role {
 
-        .project-card {
+      font-weight: bold;
 
-            margin-bottom: 0;
+      color: #5C4033;
 
-        }
+    }
 
-        .project-card ul,
+    .date {
 
-        .experience-card ul {
+      font-size: 0.9rem;
 
-            padding-left: 22px;
+      color: #8B5E3C;
 
-        }
+      margin-bottom: 15px;
 
-        .tools {
+    }
 
-            color: var(--muted);
+    .experience-card ul {
 
-            font-size: 0.9rem;
+      padding-left: 20px;
 
-            margin-top: 20px;
+    }
 
-        }
+    .experience-card li {
 
-        footer {
+      margin-bottom: 8px;
 
-            text-align: center;
+    }
 
-            padding: 30px;
+    .tools {
 
-            background: var(--primary);
+      background: #fffaf5;
 
-            color: white;
+      border-left: 4px solid #D2B48C;
 
-        }
+      padding: 10px 14px;
 
-        @media (max-width: 650px) {
+      margin-top: 15px;
 
-            header {
+      font-size: 0.9rem;
 
-                align-items: flex-start;
+    }
 
-                flex-direction: column;
+    /* Additional experience */
 
-                gap: 15px;
+    .other-experience {
 
-            }
+      background: #ffffff;
 
-            nav {
+      border: 1px solid #D2B48C;
 
-                gap: 14px;
+      border-radius: 10px;
 
-            }
+      padding: 22px;
 
-            .hero {
+      margin-bottom: 18px;
 
-                padding: 60px 7%;
+    }
 
-            }
+    .other-experience h3 {
 
-        }
+      color: #8B5E3C;
 
-    </style>
+      margin-bottom: 5px;
+
+    }
+
+    /* Case studies */
+
+    .case-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+      gap: 22px;
+
+    }
+
+    .case-card {
+
+      background: #ffffff;
+
+      border: 1px solid #D2B48C;
+
+      border-radius: 12px;
+
+      padding: 24px;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+
+      transition: transform 0.25s ease;
+
+    }
+
+    .case-card:hover {
+
+      transform: translateY(-5px);
+
+    }
+
+    .case-card h3 {
+
+      color: #8B5E3C;
+
+      margin-top: 0;
+
+    }
+
+    .case-card h4 {
+
+      color: #5C4033;
+
+      margin-bottom: 5px;
+
+    }
+
+    .case-label {
+
+      display: inline-block;
+
+      background: #efe4d8;
+
+      color: #6d4c41;
+
+      border-radius: 20px;
+
+      padding: 5px 12px;
+
+      font-size: 0.78rem;
+
+      font-weight: bold;
+
+      margin-bottom: 12px;
+
+    }
+
+    .metric {
+
+      background: #fffaf5;
+
+      border-left: 4px solid #8B5E3C;
+
+      padding: 12px;
+
+      margin-top: 15px;
+
+    }
+
+    .metric strong {
+
+      display: block;
+
+      color: #8B5E3C;
+
+      font-size: 1.7rem;
+
+    }
+
+    .disclaimer {
+
+      font-size: 0.85rem;
+
+      color: #765f54;
+
+      font-style: italic;
+
+      margin-top: 14px;
+
+    }
+
+    /* Closing section */
+
+    .closing {
+
+      background: #efebe9;
+
+      text-align: center;
+
+      padding: 45px 20px;
+
+      margin-top: 60px;
+
+    }
+
+    .closing h2 {
+
+      color: #3e2723;
+
+    }
+
+    .closing a {
+
+      display: inline-block;
+
+      background: #6d4c41;
+
+      color: #ffffff;
+
+      padding: 12px 24px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      margin-top: 12px;
+
+    }
+
+    .closing a:hover {
+
+      background: #5d4037;
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      padding: 20px;
+
+      font-size: 0.85rem;
+
+      background: #ffffff;
+
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 750px) {
+
+      .experience-card {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .experience-card img {
+
+        height: 220px;
+
+      }
+
+      .hero h1 {
+
+        font-size: 1.9rem;
+
+      }
+
+      .navbar {
+
+        gap: 15px;
+
+      }
+
+      .section-title {
+
+        font-size: 1.7rem;
+
+      }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+  <!-- Navigation -->
 
-    <a href="index.html">Evaline Mwatha</a>
+  <nav class="navbar">
 
-    <nav>
+    <a href="index.html">Home</a>
 
-        <a href="index.html">Home</a>
+    <a href="skills.html">Skills</a>
 
-        <a href="experience.html">Experience</a>
+    <a href="experience.html">Experience</a>
 
-        <a href="#projects">Projects</a>
+    <a href="contact.html">Contact</a>
 
-        <a href="#contact">Contact</a>
+  </nav>
 
-    </nav>
+  <!-- Introduction -->
 
-</header>
+  <section class="hero">
 
-<section class="hero">
-
-    <p class="category">My Professional Journey</p>
-
-    <h1>Experience & Selected Projects</h1>
+    <h1>Professional Experience & Projects</h1>
 
     <p>
 
-        A collection of professional experiences, practical work
+      My professional journey combines executive administration,
 
-        and projects demonstrating my approach to administration,
+      business research, marketing, property valuation and
 
-        research, business operations and problem-solving.
+      operational support.
 
     </p>
 
-</section>
+    <p>
 
-<main>
+      I focus on understanding business challenges, identifying
 
-    <!-- PROFESSIONAL EXPERIENCE -->
+      opportunities for improvement and developing practical,
 
-    <section id="experience">
+      research-driven solutions.
 
-        <h2 class="section-title">Professional Experience</h2>
+    </p>
 
-        <article class="experience-card">
+  </section>
 
-            <p class="category">Real Estate & Virtual Assistance</p>
+  <!-- Professional Experience -->
 
-            <h3>Administrative and Real Estate Support</h3>
+  <section class="section">
 
-            <p class="meta">Freelance Professional Experience</p>
+    <h2 class="section-title">Professional Experience</h2>
 
-            <p>
+    <p class="section-intro">
 
-                Supported real estate and administrative operations
+      A selection of roles that have shaped my experience in
 
-                through research, client coordination and transaction
+      administration, business operations, marketing and
 
-                support.
+      client support.
 
-            </p>
+    </p>
 
-            <h4>Key Responsibilities</h4>
+    <!-- Pretty Lux -->
 
-            <ul>
+    <div class="experience-card">
 
-                <li>Lead generation and prospect research.</li>
+      <img src="pretty-lux.jpg"
 
-                <li>Client communication and follow-ups.</li>
+           alt="Beauty and cosmetics products representing Pretty Lux Beauty Haven">
 
-                <li>Property-related administrative support.</li>
+      <div>
 
-                <li>Coordination of tasks throughout transactions.</li>
+        <h3>Pretty Lux Beauty Haven</h3>
 
-            </ul>
+        <div class="role">
 
-            <p class="tools">
-
-                Focus: Real Estate Operations | Virtual Assistance
-
-            </p>
-
-        </article>
-
-        <!-- Add more professional experience entries here -->
-
-    </section>
-
-    <!-- PROJECT CASE STUDIES -->
-
-    <section id="projects" style="margin-top: 75px;">
-
-        <h2 class="section-title">Selected Projects & Case Studies</h2>
-
-        <div class="project-grid">
-
-            <article class="project-card">
-
-                <p class="category">Research & Analysis</p>
-
-                <h3>Research and Information Analysis</h3>
-
-                <p>
-
-                    Demonstrating the process of gathering information,
-
-                    evaluating findings and organising insights to
-
-                    support informed decisions.
-
-                </p>
-
-                <h4>My Contribution</h4>
-
-                <ul>
-
-                    <li>Research and information gathering.</li>
-
-                    <li>Analysis and organisation of findings.</li>
-
-                    <li>Preparation of structured reports.</li>
-
-                </ul>
-
-                <p class="tools">
-
-                    Skills: Research | Critical Thinking | Analysis
-
-                </p>
-
-            </article>
-
-            <article class="project-card">
-
-                <p class="category">Real Estate Operations</p>
-
-                <h3>Lead and Transaction Support</h3>
-
-                <p>
-
-                    A practical demonstration of supporting real estate
-
-                    activities from prospect research to client
-
-                    coordination and transaction progression.
-
-                </p>
-
-                <h4>My Contribution</h4>
-
-                <ul>
-
-                    <li>Prospect identification.</li>
-
-                    <li>Lead organisation and follow-up.</li>
-
-                    <li>Administrative transaction support.</li>
-
-                </ul>
-
-                <p class="tools">
-
-                    Skills: CRM | Lead Management | Coordination
-
-                </p>
-
-            </article>
-
-            <article class="project-card">
-
-                <p class="category">Digital Marketing</p>
-
-                <h3>Marketing & Content Support</h3>
-
-                <p>
-
-                    Practical marketing work involving content planning,
-
-                    promotional communication and digital marketing
-
-                    support.
-
-                </p>
-
-                <h4>My Contribution</h4>
-
-                <ul>
-
-                    <li>Marketing research.</li>
-
-                    <li>Content and promotional material preparation.</li>
-
-                    <li>Marketing coordination.</li>
-
-                </ul>
-
-                <p class="tools">
-
-                    Skills: Digital Marketing | Research | Communication
-
-                </p>
-
-            </article>
+          Executive Virtual Assistant
 
         </div>
 
-    </section>
+        <div class="date">
 
-</main>
+          June 2023 – May 2026 | New Jersey, USA
 
-<footer id="contact">
+        </div>
 
-    <p>Let's work together.</p>
+        <p>
 
-    <p>Evaline Mwatha | Professional Portfolio</p>
+          Supported executive administration and daily business
 
-</footer>
+          operations for a beauty and e-commerce business.
+
+          Coordinated communication, customer support and
+
+          administrative workflows.
+
+        </p>
+
+        <ul>
+
+          <li>Managed executive calendars, appointments and virtual meetings.</li>
+
+          <li>Organized executive inboxes, prioritized communications
+
+              and handled routine correspondence.</li>
+
+          <li>Coordinated customer inquiries, order processing,
+
+              dispatch communication and follow-ups.</li>
+
+          <li>Maintained website content and helped keep product
+
+              information and announcements up to date.</li>
+
+          <li>Monitored AI-assisted customer support tools to support
+
+              consistent and timely customer responses.</li>
+
+          <li>Conducted research, maintained digital records and
+
+              recommended practical workflow improvements.</li>
+
+        </ul>
+
+        <div class="tools">
+
+          <strong>Tools and technologies:</strong>
+
+          Google Workspace, Microsoft Office, Asana, Trello,
+
+          AI productivity tools and virtual meeting platforms.
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Freshworld -->
+
+    <div class="experience-card">
+
+      <img src="freshworld.jpg"
+
+           alt="Real estate property representing Freshworld Achievers">
+
+      <div>
+
+        <h3>Freshworld Achievers Limited</h3>
+
+        <div class="role">
+
+          Assistant Marketing Manager & Valuation Surveyor
+
+        </div>
+
+        <div class="date">
+
+          March 2020 – December 2020 | Nairobi, Kenya
+
+        </div>
+
+        <p>
+
+          Combined property valuation knowledge with marketing
+
+          and business development support in the real estate sector.
+
+        </p>
+
+        <ul>
+
+          <li>Developed marketing communication initiatives and
+
+              branding strategies to support client outreach.</li>
+
+          <li>Monitored industry and marketplace trends to identify
+
+              opportunities and inform business decisions.</li>
+
+          <li>Collaborated with banks on property valuation assignments
+
+              for clients seeking mortgage financing.</li>
+
+          <li>Applied property market knowledge to support
+
+              valuation and marketing activities.</li>
+
+        </ul>
+
+        <div class="tools">
+
+          <strong>Relevant capabilities:</strong>
+
+          Market research, property analysis, marketing strategy,
+
+          client communication and Microsoft Office.
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- The Crews Africa -->
+
+    <div class="experience-card">
+
+      <img src="crews-africa.jpg"
+
+           alt="Organized hospitality reception representing The Crews Africa">
+
+      <div>
+
+        <h3>The Crews Africa Limited</h3>
+
+        <div class="role">
+
+          Assistant Operations Manager & Front Office Attendant Intern
+
+        </div>
+
+        <div class="date">
+
+          September 2019 – March 2020 | Nairobi, Kenya
+
+        </div>
+
+        <p>
+
+          Supported hospitality operations through administrative
+
+          coordination, document management and the organization
+
+          of company information.
+
+        </p>
+
+        <ul>
+
+          <li>Organized company files and developed support systems
+
+              to help reduce administrative workload.</li>
+
+          <li>Maintained physical files and digitized records
+
+              for easier updating and retrieval.</li>
+
+          <li>Provided clerical and front-office support for
+
+              routine and special operational requirements.</li>
+
+          <li>Helped maintain organized information systems
+
+              for account managers and authorized staff.</li>
+
+        </ul>
+
+        <div class="tools">
+
+          <strong>Relevant capabilities:</strong>
+
+          Asana, Trello, Microsoft Office, document management,
+
+          administrative coordination and workflow organization.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Additional Experience -->
+
+  <section class="section">
+
+    <h2 class="section-title">Additional Experience</h2>
+
+    <div class="other-experience">
+
+      <h3>Talent Search Foundation</h3>
+
+      <div class="role">
+
+        Korean Language Teacher & Instructor
+
+      </div>
+
+      <div class="date">
+
+        August 2022 – May 2023 | Nairobi, Kenya
+
+      </div>
+
+      <p>
+
+        Developed learning assessments, facilitated student-led
+
+        activities, integrated technology into instruction and
+
+        collaborated with colleagues on cross-curricular activities.
+
+      </p>
+
+    </div>
+
+    <div class="other-experience">
+
+      <h3>Fahari Valuers Limited</h3>
+
+      <div class="role">
+
+        Industrial Attachment – Valuation Surveyor
+
+      </div>
+
+      <div class="date">
+
+        April 2019 – August 2019 | Nairobi, Kenya
+
+      </div>
+
+      <p>
+
+        Participated in property and motor vehicle valuation
+
+        assignments, including inspections and collaboration
+
+        with mortgage-related organizations.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Case Studies -->
+
+  <section class="section">
+
+    <h2 class="section-title">Selected Problem-Solving Case Studies</h2>
+
+    <p class="section-intro">
+
+      These illustrative scenarios demonstrate how I approach
+
+      operational challenges using research, organization,
+
+      technology and structured problem-solving.
+
+    </p>
+
+    <div class="case-grid">
+
+      <!-- Case Study 1 -->
+
+      <div class="case-card">
+
+        <span class="case-label">
+
+          Illustrative scenario
+
+        </span>
+
+        <h3>1. Improving Customer Support & Order Coordination</h3>
+
+        <h4>Business challenge</h4>
+
+        <p>
+
+          A growing beauty e-commerce business experiences
+
+          delayed customer responses, inconsistent follow-ups
+
+          and difficulty tracking customer orders.
+
+        </p>
+
+        <h4>Proposed approach</h4>
+
+        <ul>
+
+          <li>Organize customer information using a CRM system.</li>
+
+          <li>Introduce structured follow-up procedures.</li>
+
+          <li>Use task management tools to track pending orders
+
+              and customer requests.</li>
+
+          <li>Monitor AI-assisted responses and escalate
+
+              unresolved inquiries.</li>
+
+        </ul>
+
+        <h4>Illustrative performance targets</h4>
+
+        <div class="metric">
+
+          <strong>25%</strong>
+
+          Faster customer inquiry response time
+
+        </div>
+
+        <div class="metric">
+
+          <strong>30%</strong>
+
+          Fewer missed customer follow-ups
+
+        </div>
+
+        <p class="disclaimer">
+
+          Hypothetical targets for demonstration only.
+
+          These are not verified results from Pretty Lux.
+
+        </p>
+
+      </div>
+
+      <!-- Case Study 2 -->
+
+      <div class="case-card">
+
+        <span class="case-label">
+
+          Illustrative scenario
+
+        </span>
+
+        <h3>2. Strengthening Real Estate Marketing & Lead Management</h3>
+
+        <h4>Business challenge</h4>
+
+        <p>
+
+          A property business struggles to maintain consistent
+
+          client outreach, organize prospect information and
+
+          identify promising marketing opportunities.
+
+        </p>
+
+        <h4>Proposed approach</h4>
+
+        <ul>
+
+          <li>Conduct market and competitor research.</li>
+
+          <li>Organize potential client information in a
+
+              structured lead database.</li>
+
+          <li>Develop a consistent client follow-up process.</li>
+
+          <li>Use Excel to monitor outreach activity and
+
+              review lead conversion patterns.</li>
+
+        </ul>
+
+        <h4>Illustrative performance targets</h4>
+
+        <div class="metric">
+
+          <strong>20%</strong>
+
+          Improvement in lead follow-up completion
+
+        </div>
+
+        <div class="metric">
+
+          <strong>15%</strong>
+
+          Improvement in lead-to-client conversion
+
+        </div>
+
+        <p class="disclaimer">
+
+          Hypothetical targets for demonstration only.
+
+          These are not verified results from Freshworld.
+
+        </p>
+
+      </div>
+
+      <!-- Case Study 3 -->
+
+      <div class="case-card">
+
+        <span class="case-label">
+
+          Illustrative scenario
+
+        </span>
+
+        <h3>3. Streamlining Administrative & Document Management</h3>
+
+        <h4>Business challenge</h4>
+
+        <p>
+
+          An operations team spends excessive time locating
+
+          documents, updating records and following up on
+
+          routine administrative tasks.
+
+        </p>
+
+        <h4>Proposed approach</h4>
+
+        <ul>
+
+          <li>Introduce a standardized digital filing structure.</li>
+
+          <li>Organize responsibilities and deadlines using
+
+              Asana or Trello.</li>
+
+          <li>Create consistent document naming and
+
+              record-keeping procedures.</li>
+
+          <li>Develop a simple system for tracking outstanding
+
+              administrative tasks.</li>
+
+        </ul>
+
+        <h4>Illustrative performance targets</h4>
+
+        <div class="metric">
+
+          <strong>30%</strong>
+
+          Less time spent retrieving documents
+
+        </div>
+
+        <div class="metric">
+
+          <strong>20%</strong>
+
+          Reduction in overdue administrative tasks
+
+        </div>
+
+        <p class="disclaimer">
+
+          Hypothetical targets for demonstration only.
+
+          These are not verified results from The Crews Africa.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Closing -->
+
+  <section class="closing">
+
+    <h2>Let's Solve Business Challenges Together</h2>
+
+    <p>
+
+      I bring research, analytical thinking and operational
+
+      support together to help businesses work more effectively.
+
+    </p>
+
+    <a href="contact.html">Get in Touch</a>
+
+  </section>
+
+  <footer>
+
+    &copy; 2026 Evaline Mwatha (Snow).
+
+    Professional Experience & Portfolio.
+
+  </footer>
 
 </body>
 
